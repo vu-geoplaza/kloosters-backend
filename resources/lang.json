@@ -1,0 +1,226 @@
+{
+  "TI": {
+    "nl": "Naam",
+    "en": "Name"
+  },
+  "ID": {
+    "nl": "ID",
+    "en": "ID"
+  },
+  "HG": {
+    "nl": "Huidige gemeente",
+    "en": "Municipality"
+  },
+  "FT": {
+    "nl": "Filiatie",
+    "en": "Filiation"
+  },
+  "FO": {
+    "nl": "FO",
+    "en": "FO"
+  },
+  "foto": {
+    "nl": "foto",
+    "en": "foto"
+  },
+  "PA": {
+    "nl": "Parochie",
+    "en": "Parish"
+  },
+  "CO": {
+    "nl": "Coördinaten",
+    "en": "Coordinates"
+  },
+  "PT": {
+    "nl": "Patroonheilige",
+    "en": "Patron Saint"
+  },
+  "AL": {
+    "nl": "Alias",
+    "en": "Alias"
+  },
+  "DI": {
+    "nl": "Diocees",
+    "en": "Diocese"
+  },
+  "DI2": {
+    "nl": "Diocees II",
+    "en": "Diocese II"
+  },
+  "PV": {
+    "nl": "Provincie",
+    "en": "Province"
+  },
+  "PV2": {
+    "nl": "Provincie II",
+    "en": "Province II"
+  },
+  "GE": {
+    "nl": "Gender",
+    "en": "Gender"
+  },
+  "ST": {
+    "nl": "Stadia",
+    "en": "Development"
+  },
+  "FI": {
+    "nl": "Einde kloosterleven",
+    "en": "End of monastic life"
+  },
+  "CK": {
+    "nl": "Verhalende bronnen (CK)",
+    "en": "Narrative sources (CK)"
+  },
+  "NS": {
+    "nl": "Verhalende bronnen (NS)",
+    "en": "Narrative sources (NS)"
+  },
+  "SV": {
+    "nl": "Handschriften (SV)",
+    "en": "Manuscripts (SV)"
+  },
+  "AR": {
+    "nl": "Archivalia",
+    "en": "Archives"
+  },
+  "LI": {
+    "nl": "Literatuur",
+    "en": "Literature"
+  },
+  "TE": {
+    "nl": "Derde Orde",
+    "en": "Third Order"
+  },
+  "MB": {
+    "nl": "Monasticon Batavum",
+    "en": "Monasticon Batavum"
+  },
+  "MM": {
+    "nl": "MeMo",
+    "en": "MeMo"
+  },
+  "VD": {
+    "nl": "Van Deventer",
+    "en": "Van Deventer"
+  },
+  "RM": {
+    "nl": "Rijksmonument",
+    "en": "Rijksmonument"
+  },
+  "AM": {
+    "nl": "Archeologisch monument",
+    "en": "Archaeological monument"
+  },
+  "AST": {
+    "nl": "Archeologische status",
+    "en": "Archaeological status"
+  },
+  "AA": {
+    "nl": "Archeologische activiteit",
+    "en": "Archaeological activity"
+  },
+  "AP": {
+    "nl": "Archeologische publicatie",
+    "en": "Archaeological publication"
+  },
+  "EV": {
+    "nl": "Eerste vermelding",
+    "en": "First mention"
+  },
+  "LV": {
+    "nl": "Laatste vermelding",
+    "en": "Last mention"
+  },
+  "Klooster": {
+    "nl": "Klooster",
+    "en": "Monastery"
+  },
+  "Categorie": {
+    "nl": "Categorie",
+    "en": "Category"
+  },
+  "Plaats": {
+    "nl": "Plaats",
+    "en": "Place"
+  },
+  "Prov": {
+    "nl": "Provincie",
+    "en": "Province"
+  },
+  "Kadaster": {
+    "nl": "Kadaster",
+    "en": "Kadaster"
+  },
+  "Opmerkingen": {
+    "nl": "Opmerkingen",
+    "en": "Notes"
+  },
+  "ENK_code": {
+    "nl": "ENK_code",
+    "en": "ENK_code"
+  },
+  "Literatuur": {
+    "nl": "Literatuur",
+    "en": "Literature"
+  },
+  "AMK": {
+    "nl": "AMK",
+    "en": "Arch_Monument"
+  },
+  "status": {
+    "nl": "status",
+    "en": "Arch_status"
+  },
+  "activit": {
+    "nl": "activit",
+    "en": "Arch_Activit"
+  },
+  "lit": {
+    "nl": "lit",
+    "en": "Arch_lit"
+  },
+  "Bisdom": {
+    "nl": "Bisdom",
+    "en": "Diocese"
+  },
+  "Patroonheilige": {
+    "nl": "Patroonheilige",
+    "en": "Patron"
+  },
+  "Locatie": {
+    "nl": "Locatie",
+    "en": "Location"
+  },
+  "Sticht": {
+    "nl": "Sticht",
+    "en": "Foundation"
+  },
+  "Stichter": {
+    "nl": "Stichter",
+    "en": "Founder"
+  },
+  "Opheffing": {
+    "nl": "Opheffing",
+    "en": "Dissolution"
+  },
+  "Prebenden": {
+    "nl": "Prebenden",
+    "en": "Prebends"
+  },
+  "ENK": {
+    "nl": "ENK",
+    "en": "ENK"
+  },
+  "MeMO": {
+    "nl": "MeMO",
+    "en": "MeMO"
+  },
+  "Uithof": {
+    "nl": "Uithof",
+    "en": "Grange"
+  },
+  "Kapittel": {
+    "nl": "Kapittel",
+    "en": "Collegiate church"
+  }
+}
