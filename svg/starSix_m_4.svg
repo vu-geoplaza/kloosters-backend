@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 100 200">
+  <g>
+    <title>starSix_m</title>
+    <path d="m5.389757,76.844406l29.74837,0.458511l15.354008,-26.135662l13.914543,25.677151l29.268532,-0.458519l-15.353981,24.760078l15.353981,23.384544l-29.268532,0l-13.434738,24.301567l-14.874195,-24.301567l-29.268531,0.91703l14.394359,-23.384537l-15.833815,-25.218597z" stroke="black" stroke-width="4" fill="rgb(128,0,128)"/>
+    <rect height="50" width="10" x="45" y="0" fill="rgb(0,0,0)"/>
+    <rect height="10" width="50" x="25" y="20" fill="rgb(0,0,0)"/>
+  </g>
+</svg>

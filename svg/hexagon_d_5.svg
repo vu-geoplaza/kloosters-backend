@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 100 200">
+  <g>
+    <title>hexagon_d</title>
+    <polygon points="33.333333333333,50 66.666666666667,50 100,83.333333333333 100,116.66666666667 66.666666666667,150 33.333333333333,150 0,116.66666666667 0,83.333333333333" stroke="black" stroke-width="4" fill="#00CED1"/>
+    <rect height="50" width="10" x="45" y="0" fill="rgb(0,0,0)"/>
+    <rect height="10" width="50" x="25" y="20" fill="rgb(0,0,0)"/>
+    <rect height="50" width="10" x="45" y="150" fill="rgb(0,0,0)"/>
+    <rect height="10" width="50" x="25" y="170" fill="rgb(0,0,0)"/>
+  </g>
+</svg>

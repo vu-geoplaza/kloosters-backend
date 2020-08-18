@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 100 100">
+  <g>
+    <title>cross</title>
+    <!--<polygon points="35,50 65,50 65,85 100,85 100,115 65,115 65,150 35,150 35,115 0,115 0,85 35,85 " stroke="black" stroke-width="4" fill="rgb(255,0,0)"/>-->
+    <circle cy="50" cx="50" r="50" stroke="black" stroke-width="4" fill="rgb(255,0,0)"/>
+  </g>
+</svg>

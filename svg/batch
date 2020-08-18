@@ -1,0 +1,6 @@
+mkdir trans
+for i in *.png
+do
+	echo "Processing $i file..."
+	convert $i -transparent white $i
+done

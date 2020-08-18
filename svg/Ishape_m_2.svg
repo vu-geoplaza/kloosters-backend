@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 100 200">
+  <g>
+    <title>Ishape_m</title>
+    <polygon points="0,50 100,50 100,80 65,80 65,120 100,120 100,150 0,150 0,120 35,120 35,80 0,80" stroke="black" stroke-width="4" fill="rgb(0,255,0)"/>
+    <rect height="50" width="10" x="45" y="0" fill="rgb(0,0,0)"/>
+    <rect height="10" width="50" x="25" y="20" fill="rgb(0,0,0)"/>
+  </g>
+</svg>
