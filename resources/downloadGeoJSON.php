@@ -8,7 +8,7 @@ $language = filter_input(INPUT_GET, 'language', FILTER_VALIDATE_REGEXP, array(
     "options" => array("regexp" => "/^[a-z]{2}$/")
 ));
 $year = filter_input(INPUT_GET, 'year', FILTER_VALIDATE_REGEXP, array(
-    "options" => array("regexp" => "/^\d{4}$/")
+    "options" => array("regexp" => "/^\d{3,4}$/")
 ));
 $type = $_GET['type'];
 $db = new db();

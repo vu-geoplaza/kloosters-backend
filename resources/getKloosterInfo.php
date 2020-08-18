@@ -5,7 +5,7 @@ include('db.php');
 include('rowsToGeoJson.php');
 
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_REGEXP, array(
-    "options" => array("regexp" => "/^.{1,3}$/")
+    "options" => array("regexp" => "/^.{1,5}$/")
 ));
 $language = filter_input(INPUT_GET, 'language', FILTER_VALIDATE_REGEXP, array(
     "options" => array("regexp" => "/^[a-z]{2}$/")
