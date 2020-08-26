@@ -91,20 +91,27 @@ Function createMinimalGeoJSON($l, $type)
     $geo->features = array();
     $n = 0;
     foreach ($l as $row) {
-        if ($row['lon'] !== "0") { // skip features in "0 island"
+        if ($type == 'klooster') {
+            $lon = (double)$row['lon'];
+            $lat = (double)$row['lat'];
+        } else {
+            $lon = (double)floatval(str_replace(",", ".", $row['Lengte_dec']));
+            $lat = (double)floatval(str_replace(",", ".", $row['Breedte_dec']));
+        }
+        if ($lon > 0) { // skip features in "0 island"
             $geo->features[$n] = new stdClass();
             $geo->features[$n]->type = "Feature";
             $geo->features[$n]->geometry = new stdClass();
             $geo->features[$n]->geometry->type = "Point";
             $geo->features[$n]->properties = new stdClass();
             $geo->features[$n]->properties->type = $type;
+            $geo->features[$n]->geometry->coordinates[0] = $lon;
+            $geo->features[$n]->geometry->coordinates[1] = $lat;
+            if ($lon > $lat) { // typos
+                $geo->features[$n]->geometry->coordinates[0] = $lat;
+                $geo->features[$n]->geometry->coordinates[1] = $lon;
+            }
             if ($type == 'klooster') {
-                $geo->features[$n]->geometry->coordinates[0] = (double)$row['lon'];
-                $geo->features[$n]->geometry->coordinates[1] = (double)$row['lat'];
-                if ($row['idL'] == 'A17') {
-                    $geo->features[$n]->geometry->coordinates[1] = (double)$row['lon'];
-                    $geo->features[$n]->geometry->coordinates[0] = (double)$row['lat'];
-                }
                 $geo->features[$n]->properties->id = $row['idL'];
                 $geo->features[$n]->properties->val = $row['VAL'];
                 $geo->features[$n]->properties->name_nl = $row['TI'];
@@ -115,11 +122,7 @@ Function createMinimalGeoJSON($l, $type)
                 $geo->features[$n]->properties->regel = $r;
             } else if ($type == 'kapittel') {
                 $geo->features[$n]->properties->id = $row['Idnr'];
-                $geo->features[$n]->geometry->coordinates[0] = (double)floatval(str_replace(",", ".", $row['Lengte_dec']));
-                $geo->features[$n]->geometry->coordinates[1] = (double)floatval(str_replace(",", ".", $row['Breedte_dec']));
             } else if ($type == 'uithof') {
-                $geo->features[$n]->geometry->coordinates[0] = (double)floatval(str_replace(",", ".", $row['Lengte_dec']));
-                $geo->features[$n]->geometry->coordinates[1] = (double)floatval(str_replace(",", ".", $row['Breedte_dec']));
                 $geo->features[$n]->properties->klooster_id = $row['idnr_klooster'];
                 $geo->features[$n]->properties->id = $row['id_ur'];
             }
