@@ -120,8 +120,16 @@ Function createMinimalGeoJSON($l, $type)
                 $o = cleanST($row['ST'], $r);
                 $geo->features[$n]->properties->ordenaam = $o;
                 $geo->features[$n]->properties->regel = $r;
+                $geo->features[$n]->properties->type = "klooster";
             } else if ($type == 'kapittel') {
                 $geo->features[$n]->properties->id = $row['Idnr'];
+                $geo->features[$n]->properties->ordenaam = "kapittel";
+                $geo->features[$n]->properties->regel = "Kapittels";
+                $geo->features[$n]->properties->type = "kapittel";
+                $geo->features[$n]->properties->name_nl = $row['Plaats'].', '.$row['Lokatie'];
+                $geo->features[$n]->properties->name_en = $row['Plaats'].', '.$row['Lokatie']; // use english table!
+                //$geo->features[$n]->properties->s = $row['Sticht'];
+                //$geo->features[$n]->properties->o = $row['Opheffing'];
             } else if ($type == 'uithof') {
                 $geo->features[$n]->properties->klooster_id = $row['idnr_klooster'];
                 $geo->features[$n]->properties->id = $row['id_ur'];

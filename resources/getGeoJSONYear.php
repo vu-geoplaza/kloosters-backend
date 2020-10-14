@@ -16,7 +16,14 @@ if (file_exists($cache_file) && CACHE_ENABLED) {
     $json=file_get_contents($cache_file);
 } else {
     $list = $db->getByPeriod($year, $year);
-    $json = json_encode(createMinimalGeoJSON($list,'klooster'));
+    $data = createMinimalGeoJSON($list,'klooster');
+
+    $list = $db->getKapittelsByPeriod($year);
+    $ka_data = createMinimalGeoJSON($list,'kapittel');
+    foreach($ka_data->features as $feature){
+        array_push($data->features, $feature);
+    }
+    $json = json_encode($data);
     file_put_contents($cache_file, $json);
 }
 header('Content-Type: application/json');
