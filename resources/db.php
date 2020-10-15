@@ -97,8 +97,6 @@ class db
                 default:
                     $sticht = $row['Sticht'];
             }
-
-
             preg_match('/\d{3,4}/m', $sticht, $matches, PREG_OFFSET_CAPTURE, 0);
             $start = (int)$matches[0][0];
             preg_match('/\d{3,4}/m', $row['Opheffing'], $matches, PREG_OFFSET_CAPTURE, 0);
