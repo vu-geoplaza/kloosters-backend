@@ -7,7 +7,7 @@ include('db.php');
 include('rowsToGeoJson.php');
 $name = $_GET['name'];
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_REGEXP, array(
-    "options" => array("regexp" => "/^.{1,3}$/")
+    "options" => array("regexp" => "/^.{1,4}$/")
 ));
 
 $db = new db();

@@ -1,7 +1,7 @@
 <?php
 Function createMaximalGeoJSON($l, $type, $langcode, $year = 2000)
 {
-    $kloosterlijst_baseurl = 'https://www2.fgw.vu.nl/oz/kloosterlijst/';
+    $kloosterlijst_baseurl = 'https://geoplaza.vu.nl/projects/kloosterlijst/';
     $lang = json_decode(file_get_contents(__DIR__ . '/lang.json'));
     $geo = new stdClass();
     $geo->type = "FeatureCollection";
@@ -45,7 +45,7 @@ Function createMaximalGeoJSON($l, $type, $langcode, $year = 2000)
                     $geo->features[$n]->properties->{$field} = $value;
                 }
             }
-            $geo->features[$n]->properties->kl_url = $kloosterlijst_baseurl . 'kdetails.php?ID=' . $row['ID'];
+            $geo->features[$n]->properties->kl_url = $kloosterlijst_baseurl . 'nl/kdetails.php?ID=' . $row['ID'];
             $geo->features[$n]->properties->photo_url = $kloosterlijst_baseurl . 'foto/' . $row['ID'] . '.JPG';
             $geo->features[$n]->properties->photo_caption = $row['FO'];
         } else if ($type == 'kapittel') {
