@@ -74,38 +74,12 @@ class db
     function getKapittelsByPeriod($year)
     {
         $this->dbh->exec("SET CHARACTER SET utf8");
-        $sql = "SELECT * FROM Kapittels";
+        $sql = "SELECT * FROM Kapittels nl JOIN KapittelsEng en on nl.Idnr=en.Idnr WHERE nl.`Sticht Exact`<=$year AND nl.`Opheffing Exact`>=$year";
         error_log($sql);
         $sth = $this->dbh->prepare($sql);
         $sth->execute();
         $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
-        $list = array();
-        foreach ($rows as $row){
-            switch ($row['Sticht']) {
-                case '12e eeuw':
-                    $sticht = '1100';
-                    break;
-                case 'zesde eeuw?':
-                    $sticht = '500';
-                    break;
-                case '8e eeuw':
-                    $sticht = '700';
-                    break;
-                case '9e eeuw':
-                    $sticht = '800';
-                    break;
-                default:
-                    $sticht = $row['Sticht'];
-            }
-            preg_match('/\d{3,4}/m', $sticht, $matches, PREG_OFFSET_CAPTURE, 0);
-            $start = (int)$matches[0][0];
-            preg_match('/\d{3,4}/m', $row['Opheffing'], $matches, PREG_OFFSET_CAPTURE, 0);
-            $end = (int)$matches[0][0];
-            if (($year>=$start)&&($year<=$end)) {
-                array_push($list, $row);
-            }
-        }
-        return $list;
+        return $rows;
     }
 
     function getUithoven()

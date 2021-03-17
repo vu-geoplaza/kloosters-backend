@@ -50,12 +50,8 @@ Function createMaximalGeoJSON($l, $type, $langcode, $year = 2000)
             $geo->features[$n]->properties->photo_caption = $row['FO'];
         } else if ($type == 'kapittel') {
             $geo->features[$n]->properties->id = $row['Idnr'];
-            $geo->features[$n]->geometry->coordinates[0] = (double)floatval(str_replace(",", ".", $row['Lengte_dec']));
-            $geo->features[$n]->geometry->coordinates[1] = (double)floatval(str_replace(",", ".", $row['Breedte_dec']));
-            if ($langcode == 'en') {
-                $geo->features[$n]->geometry->coordinates[0] = (double)floatval(str_replace(",", ".", $row['Longitude_dec']));
-                $geo->features[$n]->geometry->coordinates[1] = (double)floatval(str_replace(",", ".", $row['Latitude_dec']));
-            }
+            $geo->features[$n]->geometry->coordinates[0] = $row['lon'];
+            $geo->features[$n]->geometry->coordinates[1] = $row['lat'];
             foreach ($row as $key => $value) {
                 $geo->features[$n]->properties->{$key} = $value;
             }
@@ -94,6 +90,9 @@ Function createMinimalGeoJSON($l, $type)
         if ($type == 'klooster') {
             $lon = (double)$row['lon'];
             $lat = (double)$row['lat'];
+        } elseif ($type=='kapittel') {
+            $lon = $row['lon'];
+            $lat = $row['lat'];
         } else {
             $lon = (double)floatval(str_replace(",", ".", $row['Lengte_dec']));
             $lat = (double)floatval(str_replace(",", ".", $row['Breedte_dec']));
@@ -126,10 +125,8 @@ Function createMinimalGeoJSON($l, $type)
                 $geo->features[$n]->properties->ordenaam = "kapittel";
                 $geo->features[$n]->properties->regel = "Kapittels";
                 $geo->features[$n]->properties->type = "kapittel";
-                $geo->features[$n]->properties->name_nl = $row['Plaats'].', '.$row['Locatie'];
-                $geo->features[$n]->properties->name_en = $row['Plaats'].', '.$row['Locatie']; // use english table!
-                //$geo->features[$n]->properties->s = $row['Sticht'];
-                //$geo->features[$n]->properties->o = $row['Opheffing'];
+                $geo->features[$n]->properties->name_nl = $row['Titel'];
+                $geo->features[$n]->properties->name_en = $row['Title'];
             } else if ($type == 'uithof') {
                 $geo->features[$n]->properties->klooster_id = $row['idnr_klooster'];
                 $geo->features[$n]->properties->id = $row['id_ur'];
