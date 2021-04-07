@@ -2,6 +2,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 100 100">
     <g>
         <title>circle_d</title>
-        <circle cy="50" cx="50" r="48" stroke="black" stroke-width="1" fill="rgb(0,0,255)"/>
+        <circle cy="50" cx="50" r="48" stroke="black" stroke-width="1" fill="#d95f02"/>
     </g>
 </svg>
