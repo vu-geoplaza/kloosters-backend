@@ -1,3 +1,6 @@
 /resources/config.php
 /.idea/
 /index.html
+/css
+/js
+/static

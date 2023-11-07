@@ -5,7 +5,7 @@ Define('DBHOST','kloosterlijst-dbs-srvr.vu.nl');
 Define('DB','kloosterlijst-dbs');
 Define('DBNAME','******');
 Define('DBPW','******');
-
+Define('DBPORT', 13306);
 
 Define('BRON1', 'Goudriaan, K. (2017). Kloosterlijst en Kloosterkaart ');
 Define('BRON2', ' [Data set]. Retrieved ');
