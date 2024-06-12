@@ -1,7 +1,7 @@
 <?php
 Function createMaximalGeoJSON($l, $type, $langcode, $year = 2000)
 {
-    $kloosterlijst_baseurl = 'https://geoplaza.vu.nl/projects/kloosterlijst/';
+    $kloosterlijst_baseurl = KLOOSTERLIJST_BASE_URL;
     $lang = json_decode(file_get_contents(__DIR__ . '/lang.json'));
     $geo = new stdClass();
     $geo->type = "FeatureCollection";
