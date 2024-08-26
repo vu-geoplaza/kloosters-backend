@@ -4,7 +4,7 @@ Define('DBHOST',getenv('MYSQL_HOST'));
 Define('DB',getenv('MYSQL_DATABASE'));
 Define('DBNAME',getenv('MYSQL_USER'));
 Define('DBPW',getenv('MYSQL_PASSWORD'));
-Define('DBPORT',3306);
+Define('DBPORT',33060);
 
 Define('BRON1', 'Goudriaan, K. (2017). Kloosterlijst en Kloosterkaart ');
 Define('BRON2', ' [Data set]. Retrieved ');
