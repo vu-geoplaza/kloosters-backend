@@ -13,7 +13,7 @@ class db
 
     function __construct()
     {
-        error_log("mysql:host=" . DBHOST . ";dbname=" . DB . ";port=". DBPORT, DBNAME);
+        error_log("mysql:host=" . DBHOST . ";dbname=" . DB . ";port=". DBPORT . ';' . DBNAME . ';' . DBPW);
         $this->dbh = new PDO("mysql:host=" . DBHOST . ";dbname=" . DB . ";port=". DBPORT, DBNAME, DBPW) or die('connection failed');
     }
 
