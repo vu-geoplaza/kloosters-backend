@@ -11,9 +11,9 @@ Define('BRON2', ' [Data set]. Retrieved ');
 Define('BRON3', ', from http://geoplaza.vu.nl/projects/kloosters');
 Define('LICENSE', '<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>');
 
-Define('LIJSTIDURL','kloosterlijst/nl/kdetails.php?ID=');
-Define('LIJSTFOTOURL','kloosterlijst/foto/');
-Define('KLOOSTERLIJST_BASE_URL','kloosterlijst/');
+#Define('LIJSTIDURL','kloosterlijst/nl/kdetails.php?ID=');
+#Define('LIJSTFOTOURL','kloosterlijst/foto/');
+Define('KLOOSTERLIJST_BASE_URL',getenv('KLOOSTERLIJST_BASE_URL'));
 
 Define('KAARTIDURL','index.html?id=');
 Define('SYMBOLURL','resources/svg/');
